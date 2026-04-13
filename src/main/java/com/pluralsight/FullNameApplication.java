@@ -24,6 +24,20 @@ public class FullNameApplication {
         System.out.print("Suffix: ");
         String suffix = scanner.nextLine().trim();
 
-        
+        String fullName = getFullName(firstName, middleName, lastName, suffix);
+        System.out.println(fullName);
+
+
+    }
+
+    public static String getFullName(String firstName, String middleName, String lastName, String suffix) {
+        String middleFirstLetter = "";
+        if (middleName.length() > 0) {
+            middleFirstLetter = middleName.substring(0, 1).toUpperCase() + ".";
+        }
+        return (suffix.length() > 0) ? firstName + middleFirstLetter + lastName + ", " + suffix :
+                firstName + middleFirstLetter + lastName;
+
+
     }
 }
