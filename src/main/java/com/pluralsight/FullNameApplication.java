@@ -42,7 +42,7 @@ public class FullNameApplication {
         /* Check if there is a suffix. If yes return the full name but with a "," before the suffix.
         If no suffix you just return the rest of the name as the middle name logic is completed already.
          */
-        return (suffix.length() > 0) ? firstName + middleFirstLetter + lastName + ", " + suffix :
+        return (suffix.length() > 0) ? firstName + " " + middleFirstLetter + " " + lastName + ", " + suffix :
                 firstName + middleFirstLetter + lastName;
 
 
