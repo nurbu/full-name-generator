@@ -44,8 +44,13 @@ public class FullNameApplication {
         If no middle name leave it blank.
         */
         String middleFirstLetter = " ";
-        if (middleName.length() > 0) {
+        // Check to see if they put full middle name.
+        if (middleName.length() > 2) {
             middleFirstLetter = " " + middleName.substring(0, 1).toUpperCase() + ". ";
+        }
+        // Check if they put the middle name initial with "."
+        else if (middleName.length() == 2) {
+            middleFirstLetter = " " + middleName + " ";
         }
         /* Check if there is a suffix. If yes return the full name but with a "," before the suffix.
         If no suffix, just returns the rest of the name as the middle name logic is completed already.
