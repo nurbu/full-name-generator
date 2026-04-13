@@ -33,7 +33,7 @@ public class FullNameApplication {
 
         // Calls the getFullName and gets the full name and gets stored in fullName
         fullName = getFullName(firstName, middleName, lastName, suffix);
-        System.out.println(fullName);
+        System.out.println("Full name: " + fullName);
 
         scanner.close();
 
